@@ -2,7 +2,8 @@
 /**
  *  STATIC MEMBERS ARE PART OF CLASS BUT NOT THE OBJECT
  *  STATIC MEMBERS ARE CLASS VARIABLES
- *  ACCESS THE VALUES THROUGH CLASS NAME WITHOUT INSTANTIATING
+ *  ACCESS THE VALUES THROUGH CLASS NAME WITHOUT INSTANTIATING,
+ *  used for sharing same information amoung the objects of the class
  */
 class Number{
 	public static $num=100;
