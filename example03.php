@@ -8,16 +8,18 @@ class BankAccount{
 	public function deposit(float $amount){
 		$this->balance += $amount;
 	}
-	public function withDraw(float $abount){
+	public function withDraw(float $amount){
 		if($this->balance >= $amount){
 			$this->balance -= $amount;
 		}else{
-			echo "<br>Not Enough Balance<br>";
+			echo "<br>Not Enough Balance<br> Current Balance is ".$this->balance.PHP_EOL;
 		}
 	}
 }
 
 $account = new BankAccount();
-echo "Current Balance Is :: ".$account->displayBalance()."<br>";
+echo "Current Balance Is :: ".$account->displayBalance()."<br>".PHP_EOL;
 $account->deposit(500);
-echo "Current Balance Is :: ".$account->displayBalance()."<br>";
+echo "Current Balance Is :: ".$account->displayBalance()."<br>".PHP_EOL;
+$account->withDraw(600);
+echo "Current Balance Is :: ".$account->displayBalance()."<br>".PHP_EOL;
