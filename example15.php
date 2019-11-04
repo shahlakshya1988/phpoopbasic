@@ -52,6 +52,13 @@ class Jar implements Openable{
 	}
 }
 
+function OpenSomething(Openable $object){
+	$object->open();
+}
+
+function CloseSomething(Openable $object){
+	$object->close();
+}
 $d1 = new Door();
 $d1 -> open();
 $d1 -> close();
@@ -59,3 +66,11 @@ $d1 -> close();
 $j1= new Jar();
 $j1->open();
 $j1->close();
+
+$d2=new Door();
+OpenSomething($d2);
+CloseSomething($d2);
+
+$j2 = new Jar();
+OpenSomething($j2);
+CloseSomething($j2);
